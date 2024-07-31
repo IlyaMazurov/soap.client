@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soap.Client", "src\Soap.Client\Soap.Client.csproj", "{6620DE65-EDC6-428A-9466-0680974BA6C6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soap.Client.Hosting", "src\Soap.Client.Hosting\Soap.Client.Hosting.csproj", "{1F419826-D205-4048-BB0B-DD0E9720DDEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soap.Client.Test", "src\Soap.Client.Test\Soap.Client.Test.csproj", "{0165B1B9-3D20-4970-A013-E824BBD67CA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5BC6172C-D593-439B-8D10-ACE19523C069}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.gitlab-ci.yml = .gitlab-ci.yml
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{B79F51A7-1808-4746-AF72-8F2134772939}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{6C99D342-E97D-45FB-832E-783208CFB3FE}"
+	ProjectSection(SolutionItems) = preProject
+		docs\img\soapui1.png = docs\img\soapui1.png
+		docs\img\soapui2.png = docs\img\soapui2.png
+		docs\img\vs1.png = docs\img\vs1.png
+		docs\img\vs2.png = docs\img\vs2.png
+		docs\img\vs3.png = docs\img\vs3.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6620DE65-EDC6-428A-9466-0680974BA6C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6620DE65-EDC6-428A-9466-0680974BA6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6620DE65-EDC6-428A-9466-0680974BA6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6620DE65-EDC6-428A-9466-0680974BA6C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F419826-D205-4048-BB0B-DD0E9720DDEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F419826-D205-4048-BB0B-DD0E9720DDEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F419826-D205-4048-BB0B-DD0E9720DDEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F419826-D205-4048-BB0B-DD0E9720DDEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0165B1B9-3D20-4970-A013-E824BBD67CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0165B1B9-3D20-4970-A013-E824BBD67CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0165B1B9-3D20-4970-A013-E824BBD67CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0165B1B9-3D20-4970-A013-E824BBD67CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF52F6B1-3DD6-4F5A-9ED0-D35B3F00DF55}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B79F51A7-1808-4746-AF72-8F2134772939} = {5BC6172C-D593-439B-8D10-ACE19523C069}
+		{6C99D342-E97D-45FB-832E-783208CFB3FE} = {B79F51A7-1808-4746-AF72-8F2134772939}
+	EndGlobalSection
+EndGlobal

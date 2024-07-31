@@ -1,10 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
-using Soap.Client.Configuration;
-using Soap.Client.Http.Context;
-using Soap.Client.Test.Configuration;
 using Soap.Client.Extensions;
+using Soap.Client.Configuration;
 using Soap.Client.Test.Models;
+using Soap.Client.Test.Configuration;
 
 namespace Soap.Client.Test;
 
@@ -17,32 +16,8 @@ public class SoapClientHttpTests
     public async Task SendRequestTest()
     {
         var client = _serviceProvider.GetRequiredService<ISoapClient>();
-        var response = await client.PostAsync<AuthmethodResponseBody>(SoapVersion.Soap12, new AuthmethodRequest());
-        
-        Assert.That(response.AuthmethodResponse?.AuthmethodResult, Is.EqualTo("True"));
-    }
+        var response = await client.PostAsync<AuthmethodResponseBody>(SoapVersion.Soap12, new AuthmethodRequest { Test = "test" });
 
-    [Test]
-    public async Task CreateSoapClientAmbientTest()
-    {
-        using (SoapClientAmbient.Init())
-        {
-            var client = _serviceProvider.GetRequiredService<ISoapClient>();
-            await client.PostAsync<AuthmethodResponseBody>(SoapVersion.Soap12, new AuthmethodRequest());
-
-            Assert.That(SoapClientAmbient.GetContext(), Is.Not.Null);
-        }
-    }
-
-    [Test]
-    public async Task CheckScopeSoapClientAmbientTest()
-    {
-        using (SoapClientAmbient.Init())
-        {
-            var client = _serviceProvider.GetRequiredService<ISoapClient>();
-            await client.PostAsync<AuthmethodResponseBody>(SoapVersion.Soap12, new AuthmethodRequest());
-        }
-
-        Assert.Throws<InvalidOperationException>(() => SoapClientAmbient.GetContext());
+        Assert.That(response.Data?.AuthmethodResponse?.AuthmethodResult, Is.EqualTo("True"));
     }
 }

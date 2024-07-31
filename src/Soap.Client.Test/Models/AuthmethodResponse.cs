@@ -1,5 +1,5 @@
 ﻿using System.Xml.Serialization;
-using Soap.Client.Model;
+using Soap.Client.Models;
 
 namespace Soap.Client.Test.Models;
 
@@ -11,6 +11,6 @@ public class AuthmethodResponseBody : BodyResponse
 
 public class AuthmethodResponse
 {
-    [XmlElement] 
+    [XmlElement]
     public string? AuthmethodResult { get; set; }
 }
