@@ -2,5 +2,5 @@
 
 public class AuthmethodRequest
 {
-    public string? TestGuid { get; set; } = Guid.NewGuid().ToString();
+    public string Test { get; init; } = null!;
 }
